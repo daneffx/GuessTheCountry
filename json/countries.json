@@ -1,0 +1,42 @@
+{
+    "countries":
+        [{
+        "Name": "North America",
+         "images": {
+             "red": "assets/img/countries/na-blue.svg",
+             "blue": "assets/img/countries/na-green.svg",
+             "green": "assets/img/countries/na-red.svg",
+             "yellow": "assets/img/countries/na-yellow.svg"
+         },
+         "answerimage": "assets/img/countries/na-black.svg",
+         "hints": [
+             "This country has a population of over 300M"
+         ]
+        },
+        {
+            "Name": "United Kingdom",
+             "images": {
+                 "red": "assets/img/countries/uk-blue.svg",
+                 "blue": "assets/img/countries/uk-green.svg",
+                 "green": "assets/img/countries/uk-red.svg",
+                 "yellow": "assets/img/countries/uk-yellow.svg"
+             },
+             "answerimage": "assets/img/countries/uk-black.svg",
+             "hints": [
+                 "This country is one of the founding members of the European Union"
+             ]
+        },
+        {
+            "Name": "Japan",
+             "images": {
+                 "red": "assets/img/countries/japan-blue.svg",
+                 "blue": "assets/img/countries/japan-green.svg",
+                 "green": "assets/img/countries/japan-red.svg",
+                 "yellow": "assets/img/countries/japan-yellow.svg"
+             },
+             "answerimage": "assets/img/countries/japan-black.svg",
+             "hints": [
+                 "This country is one of the founding members of the European Union"
+             ]
+        }]
+}
