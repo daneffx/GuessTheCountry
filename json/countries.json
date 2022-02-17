@@ -3,40 +3,46 @@
         [{
         "Name": "North America",
          "images": {
-             "red": "assets/img/countries/na-blue.svg",
-             "blue": "assets/img/countries/na-green.svg",
-             "green": "assets/img/countries/na-red.svg",
-             "yellow": "assets/img/countries/na-yellow.svg"
+             "red": "assets/img/countries/america/na-blue.svg",
+             "blue": "assets/img/countries/america/na-green.svg",
+             "green": "assets/img/countries/america/na-red.svg",
+             "yellow": "assets/img/countries/america/na-yellow.svg"
          },
-         "answerimage": "assets/img/countries/na-black.svg",
+         "answerimage": "assets/img/countries/america/na-black.svg",
          "hints": [
-             "This country has a population of over 300M"
+             "This country has a population of over 300M",
+             "Tipping is really important in this country when paying for something",
+             "It takes about 45 hours to drive across the country"
          ]
         },
         {
             "Name": "United Kingdom",
              "images": {
-                 "red": "assets/img/countries/uk-blue.svg",
-                 "blue": "assets/img/countries/uk-green.svg",
-                 "green": "assets/img/countries/uk-red.svg",
-                 "yellow": "assets/img/countries/uk-yellow.svg"
+                 "red": "assets/img/countries/uk/uk-blue.svg",
+                 "blue": "assets/img/countries/uk/uk-green.svg",
+                 "green": "assets/img/countries/uk/uk-red.svg",
+                 "yellow": "assets/img/countries/uk/uk-yellow.svg"
              },
-             "answerimage": "assets/img/countries/uk-black.svg",
+             "answerimage": "assets/img/countries/uk/uk-black.svg",
              "hints": [
-                 "This country is one of the founding members of the European Union"
+                 "This country is one of the founding members of the European Union",
+                 "This country is known for its rich history",
+                 "It consists of four different countries"
              ]
         },
         {
             "Name": "Japan",
              "images": {
-                 "red": "assets/img/countries/japan-blue.svg",
-                 "blue": "assets/img/countries/japan-green.svg",
-                 "green": "assets/img/countries/japan-red.svg",
-                 "yellow": "assets/img/countries/japan-yellow.svg"
+                 "red": "assets/img/countries/japan/japan-blue.svg",
+                 "blue": "assets/img/countries/japan/japan-green.svg",
+                 "green": "assets/img/countries/japan/japan-red.svg",
+                 "yellow": "assets/img/countries/japan/japan-yellow.svg"
              },
-             "answerimage": "assets/img/countries/japan-black.svg",
+             "answerimage": "assets/img/countries/japan/japan-black.svg",
              "hints": [
-                 "This country is one of the founding members of the European Union"
+                 "It has the 11th largest population in the world",
+                 "This country has one of the best life-expectancy rates in the world",
+                 "Nearly half the zippers used in the world are made here"
              ]
         }]
 }
