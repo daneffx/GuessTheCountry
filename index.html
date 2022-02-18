@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7, shrink-to-fit=yes">
     <meta name="title" content="Guess The Country">
     <meta name="description" content="ViewGuesser is a higher-lower guessing game based on YouTube video views.">
     <meta name="keywords" content="ViewGuesser, Views, Higher, Lower, Guessing, Game, YouTube, Viewcount">
@@ -81,6 +81,9 @@
         <div class="col-lg-12">
             <div id="main-content" class="leftside d-flex justify-content-center align-items-center">
                 <div class="main-content" style="text-align: center;">
+                    <div class="score-counter">
+                        <h3><b>SCORE: 0</b></h3>
+                    </div>
                         <div class="country-question">
                             <h1><b>What country is this?</b></h1>
                         </div>
@@ -90,10 +93,10 @@
                     </div>
                     <br>
                     <div class="country-options">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" aria-describedby="inputGroup-sizing-default">
+                        <div class="input-group mb-3 col-md-12">
+                            <input id="guess-box" type="text" class="form-control" aria-describedby="inputGroup-sizing-default">
                             <div class="input-group-append">
-                                <button id="btn-guess" class="btn btn-outline-wht" type="button">Guess</button>
+                                <button id="btn-guess" class="btn btn-outline-wht" onclick="makeGuess();" type="button">Guess</button>
                           </div>
                     </div>
                 </div>
@@ -112,11 +115,35 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-12">
-        
+
+<!-- Modal -->
+<div class="modal fade" id="losingModal" tabindex="-1" aria-labelledby="losingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div id="modal-body" class="modal-body d-flex justify-content-center align-items-center">
+            <div class="score-content" style="text-align: center;">
+                <h3>You scored:</h3>
+                <h1 id="losing-score" style="color: red;">0</h1>
+                <p id="losing-comment">Better luck next time!</p>
+                <hr>
+                <p>Want to share with your friends?</p>
+                <div class="share-buttons">
+                        <ul>
+                            <li id="twitter-button"><a href="#" id="tweet-button" class="button"><i class="fab fa-twitter"></i> Tweet</a></li>
+                            <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fviewguesser.com%2F&amp;src=sdkpreparse" id="fb-share-button" class="button"><i class="fab fa-facebook-f"></i> Share</a></li>
+                        </ul>
+                </div>
+                <div class="losing-navigation-buttons">
+                    <ul>
+                        <li><a href="index.html" id="play-again-btn" class="btn btn-outline btn-losingnavigation"><i class="fas fa-play"></i> Play again</a></li>
+                        <li><a href="https://dane.lol" id="return-menu-btn" class="btn btn-outline btn-losingnavigation"><i class="fas fa-home"></i> Return to home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 
     <script>
         window.onload = function () {

@@ -13,6 +13,13 @@
              "This country has a population of over 300M",
              "Tipping is really important in this country when paying for something",
              "It takes about 45 hours to drive across the country"
+         ],
+         "utterances" : [
+             "north america",
+             "northamerica",
+             "n america",
+             "namerica",
+             "na"
          ]
         },
         {
@@ -28,7 +35,13 @@
                  "This country is one of the founding members of the European Union",
                  "This country is known for its rich history",
                  "It consists of four different countries"
-             ]
+             ],
+             "utterances" : [
+                "united kingdom",
+                "unitedkingdom",
+                "ukingdom",
+                "uk"
+            ]
         },
         {
             "Name": "Japan",
@@ -43,6 +56,9 @@
                  "It has the 11th largest population in the world",
                  "This country has one of the best life-expectancy rates in the world",
                  "Nearly half the zippers used in the world are made here"
-             ]
+             ],
+             "utterances" : [
+                "japan"
+            ]
         }]
 }

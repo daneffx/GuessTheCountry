@@ -5,11 +5,18 @@ let gl_countryHints = [];
 
 let score = 0;
 let hints = 3;
+let remainingTries = 3;
+
+    $("#guess-box").keyup(function(event) {
+    if (event.keyCode === 13) {
+    $("#btn-guess").click();
+    }
+    });
 
 function getJSON() {
     fetch('https://raw.githubusercontent.com/0xdane/TempTest/main/countries.json').then (data => data.json()).then(data => {
     gl_countries.push(data.countries);
-    console.log(gl_countries)
+    console.log(gl_countries);
     randomCountry();
         
     })
@@ -20,15 +27,23 @@ function getJSON() {
 
 function randomCountry() {
     let randomCountry = [];
-
-    var randomCountrySample = _.sample(gl_countries[0]);
+    
+    if(gl_countries[0][0] !== undefined) {
+        var randomCountrySample = _.sample(gl_countries[0]);
 
     randomCountry = [];
     randomCountry.push(randomCountrySample);
 
+    _.remove(gl_countries[0], function(h) {
+        return h === randomCountrySample;
+    });
+
     console.log(randomCountry);
     gl_country.push(randomCountry);
     getCountryImage();
+    } else {
+        alert ("You have named all of the countries. Thanks for playing! :)")
+    }
 }
 
 function getCountryImage() {
@@ -79,7 +94,43 @@ function getNewHint() {
 function populateData() {
     $("#country-image").html("<img id=\"countryimg-canvas\" src=\"" + gl_countryImage + "\">");
     $("#remaining-hints").html("You have <span style=\"color: aqua\"><b>" + hints + "</b></span> hints remaining.")
+    $(".score-counter").html("<h3><b>SCORE: " + score + "</b></h3>")
+    $(".hints-section").html("");
     randomRotateImage();
+}
+
+function makeGuess() {
+   var guessText = $("#guess-box").val().toLowerCase();
+   var utteranceArr = gl_country[0][0].utterances;
+
+   if(remainingTries > 0) {
+    if(utteranceArr.includes(guessText)) {
+        utteranceArr = [];
+        gl_country = [];
+        gl_countryImage = [];
+        gl_countryHints = [];
+ 
+        hints = 3;
+        score = score + 1;
+        remainingTries = 3;
+
+        $("#guess-box").val("");
+
+        randomCountry();
+    } else {
+        alert("That is incorrect");
+        remainingTries = remainingTries - 1
+        $("#guess-box").val("");
+        checkIfLost();
+    }
+ } 
+}
+
+function checkIfLost() {
+    if(remainingTries === 0) {
+
+        $("#losingModal").modal("show")
+    }
 }
 
 function randomRotateImage() {

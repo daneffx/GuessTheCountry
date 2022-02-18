@@ -60,6 +60,10 @@ body.swal2-height-auto {
     margin: 5px;
 }
 
+.score-counter h3 {
+    color: white;
+}
+
 .btn {
     box-shadow: none !important;
 }
@@ -124,4 +128,100 @@ body.swal2-height-auto {
 
 .country-image {
     display: none;
+}
+
+.modal-body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(assets/img/backgrounds/1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.score-content h1, h2, h3, p {
+    color: white;
+}
+
+.share-buttons ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+}
+
+.share-buttons li {
+    display: inline;
+    color: white;
+    padding-right: 5px;
+}
+
+#tweet-button {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+    
+        text-decoration: none;
+        background-color: #00acee;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        color: white;
+}
+
+#fb-share-button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    background-color: #4267B2;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.losing-navigation-buttons ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+margin-top: 50px;
+display: inline-flex;
+}
+
+.losing-navigation-buttons li {
+display: inline;
+color: white;
+padding-right: 5px;
+}
+
+.btn-losingnavigation {
+cursor: pointer;
+    border-radius: 2em;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 0%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgb(0 0 0 / 4%);
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    margin-top: 10px;
+}
+
+.btn-losingnavigation:hover {
+background-color: white;
+    color: black;
+}
+
+#play-again-btn {
+padding-right: 30px;
+padding-left: 30px;
 }
