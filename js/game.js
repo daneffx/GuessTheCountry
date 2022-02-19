@@ -92,10 +92,14 @@ function getNewHint() {
 }
 
 function populateData() {
+    remainingTries = 3;
+
     $("#country-image").html("<img id=\"countryimg-canvas\" src=\"" + gl_countryImage + "\">");
     $("#remaining-hints").html("You have <span style=\"color: aqua\"><b>" + hints + "</b></span> hints remaining.")
     $(".score-counter").html("<h3><b>SCORE: " + score + "</b></h3>")
+    $("#tries-remaining").html("You have <span style=\"color: red;\"><b>" + remainingTries + "</b></span> guesses remaining.")
     $(".hints-section").html("");
+
     randomRotateImage();
 }
 
@@ -103,33 +107,69 @@ function makeGuess() {
    var guessText = $("#guess-box").val().toLowerCase();
    var utteranceArr = gl_country[0][0].utterances;
 
-   if(remainingTries > 0) {
-    if(utteranceArr.includes(guessText)) {
-        utteranceArr = [];
-        gl_country = [];
-        gl_countryImage = [];
-        gl_countryHints = [];
- 
-        hints = 3;
-        score = score + 1;
-        remainingTries = 3;
+   if ($("#guess-box").val() !== "") {
+    if(remainingTries > 0) {
+        if(utteranceArr.includes(guessText)) {
+            utteranceArr = [];
+            gl_country = [];
+            gl_countryImage = [];
+            gl_countryHints = [];
+     
+            hints = 3;
+            score = score + 1;
+            remainingTries = 3;
 
-        $("#guess-box").val("");
-
-        randomCountry();
-    } else {
-        alert("That is incorrect");
-        remainingTries = remainingTries - 1
-        $("#guess-box").val("");
-        checkIfLost();
-    }
- } 
+            var audio = new Audio('assets/sounds/correct.mp3');
+            audio.play();
+    
+            $("#guess-box").val("");
+    
+            randomCountry();
+        } else {
+            if(remainingTries > 1) {
+                Swal.fire({
+                    icon: 'error',
+                    title: "<h1 style='color: white;'><b>That is incorrect!</b></h1>",
+                    background: '#363636',
+                    showConfirmButton: false,
+                    timer: 1100,
+                    timerProgressBar: true,
+                    progressBarColor: "#ffffff",
+                    didOpen: () => {
+                    timerInterval = setInterval(() => {
+                    b.textContent = Swal.getTimerLeft()
+                    }, 100)
+                    },
+                    willClose: () => {
+                    clearInterval(timerInterval)
+                    }
+                  })
+            }
+            remainingTries = remainingTries - 1
+            $("#tries-remaining").html("You have <span style=\"color: red;\"><b>" + remainingTries + "</b></span> guesses remaining.")
+            $("#guess-box").val("");
+            checkIfLost();
+        }
+     }
+   } else {
+    Swal.fire({
+        icon: 'error',
+        title: "<h1 style='color: white;'><b>Oops...</b></h1>",
+        html: "<p style='color: white'>You didn't enter anything in the textbox :(</p>",
+        background: '#363636',
+        confirmButtonColor: "#ffffff",
+        confirmButtonText: "Okay"
+      })
+   } 
 }
 
 function checkIfLost() {
     if(remainingTries === 0) {
-
+        $("#losing-score").html("<b>" + score + "</b>")
+        $("#twitter-button").html("<a href=\"https://twitter.com/intent/tweet?text=I%20just%20scored%20" + score + " playing%20Guess%20The%20Country.%20Think%20you%20can%20score%20higher?%20https://dane.lol/guess-the-country\" id=\"tweet-button\" class=\"button\"><i class=\"fab fa-twitter\"></i> Tweet</a>")
         $("#losingModal").modal("show")
+        var audio = new Audio('assets/sounds/incorrect.mp3');
+            audio.play();
     }
 }
 

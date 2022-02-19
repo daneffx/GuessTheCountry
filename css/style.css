@@ -16,6 +16,10 @@ body.swal2-height-auto {
       color: black !important;
   }
 
+  .swal2-timer-progress-bar {
+      background: white !important;
+  }
+
   @media screen and (max-height: 650px) {
     body {
       height: 50%;
@@ -60,6 +64,28 @@ body.swal2-height-auto {
     margin: 5px;
 }
 
+.input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-left: -1px;
+    border-top-left-radius: 0.25rem !important;
+    border-bottom-left-radius: 0.25rem !important;
+}
+
+.input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+    border-top-right-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+}
+
+@media screen and (max-width: 600px) {
+    .input-group .btn {
+        display: block;
+        width: 100%;
+    }
+    #btn-guess {
+        margin-left: 0px !important;
+        margin-top: 10px !important;
+    }
+}
+
 .score-counter h3 {
     color: white;
 }
@@ -97,6 +123,10 @@ body.swal2-height-auto {
     font-style: italic;
     font-weight: 600;
 }
+
+.lives-remaining p {
+    text-decoration: underline;
+}
     
 
 @keyframes rainbow {
@@ -131,7 +161,7 @@ body.swal2-height-auto {
 }
 
 .modal-body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(assets/img/backgrounds/1.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://thumbs.gfycat.com/DopeyFinishedGoldfinch-max-1mb.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
