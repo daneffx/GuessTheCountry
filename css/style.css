@@ -15,10 +15,27 @@ body.swal2-height-auto {
   .swal2-styled.swal2-confirm {
       color: black !important;
   }
+  .swal2-styled.swal2-deny {
+      color: black !important;
+  }
 
   .swal2-timer-progress-bar {
       background: white !important;
   }
+
+  /* .swal2-container, .swal2-center, .swal2-backdrop-show {
+    background-image: url(assets/img/misc/confetti.gif); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat:repeat,no-repeat;
+    background-color:#ededed;
+    background-position:0%;
+    background-size:auto 100%;
+    height:100%;
+    width:100%;
+  } */
 
   @media screen and (max-height: 650px) {
     body {

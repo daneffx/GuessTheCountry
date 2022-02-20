@@ -14,7 +14,7 @@ let remainingTries = 3;
     });
 
 function getJSON() {
-    fetch('https://raw.githubusercontent.com/0xdane/TempTest/main/countries.json').then (data => data.json()).then(data => {
+    fetch('https://raw.githubusercontent.com/0xdane/GuessTheCountry/main/json/countries.json').then (data => data.json()).then(data => {
     gl_countries.push(data.countries);
     console.log(gl_countries);
     randomCountry();
@@ -42,7 +42,31 @@ function randomCountry() {
     gl_country.push(randomCountry);
     getCountryImage();
     } else {
-        alert ("You have named all of the countries. Thanks for playing! :)")
+        Swal.fire({
+            title: "<h1 style='color: white;'><b>Great job!</b></h1>",
+            html: "<p style='color: white'>You have named all of the countries! Thanks for playing :)</p>",
+            imageUrl: 'assets/img/misc/celebration.gif',
+            imageWidth: 100,
+            imageHeight: 100,
+            background: '#363636',
+            imageAlt: 'Clapping Face',
+            showDenyButton: true,
+            confirmButtonColor: "#ffffff",
+            confirmButtonText: "Play again",
+            denyButtonColor: "#ffffff",
+            denyButtonText: "Return to dane.lol",
+            backdrop: `
+            rgba(0,0,0,0.4)
+            url("assets/img/misc/confetti.gif")
+            left top
+            `
+          }).then((result) => {
+            if (result.isConfirmed) {
+                location.reload();
+            } else if (result.isDenied) {
+                window.location.href = "https://dane.lol";
+            }
+          });
     }
 }
 
