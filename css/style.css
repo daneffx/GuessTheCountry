@@ -144,7 +144,7 @@ body.swal2-height-auto {
 }
 
 .hint-counter p {
-    text-decoration: underline;
+    margin: 0;
 }
 
 #btn-guess {
@@ -165,7 +165,11 @@ body.swal2-height-auto {
 }
 
 .lives-remaining p {
-    text-decoration: underline;
+    margin: 0;
+}
+
+.skips-remaining p {
+    margin: 0;
 }
     
 

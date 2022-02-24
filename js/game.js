@@ -5,7 +5,7 @@ let gl_countryHints = [];
 
 let score = 0;
 let hints = 3;
-let remainingTries = 3;
+let remainingTries = 5;
 let remainingSkips = 2;
 
     $("#guess-box").keyup(function(event) {
@@ -18,6 +18,28 @@ function getJSON() {
     fetch('https://raw.githubusercontent.com/0xdane/GuessTheCountry/main/json/countries.json').then (data => data.json()).then(data => {
     gl_countries.push(data.countries);
     console.log(gl_countries);
+
+    Swal.fire({
+        title: '<b style="color: white;">How to play!',
+        icon: 'info',
+        html:
+          '<p style="color: white;">You will be presented with the outline of a random country, this image will be randomly rotated up to 360 degrees. You need to try and guess which country it is!</p>' +
+          '<p style="color: white;">To make a guess, type the name of the country in the box and click the "Guess" button. If you are correct another country will be displayed, if you are incorrect you will need to guess again. If you are incorrect 5 times, you will lose. The guess attempts reset for every country.</p>' +
+          '<p style="color: white;">You can use hints to help you guess which country it is. If you cannot guess, you can use the skip button to move to the next country. This will not count to your score.</p>' +
+          '<p style="color: #73ffa6;">There is a total of <b>195</b> countries.</p>' +
+          '<p style="color: #ff6e6e;">You have <b>5</b> guess attempts per country.</p>' +
+          '<p style="color: #73fdff;">You have a total of <b>3</b> hints per country.</p>' +
+          '<p style="color: #d573ff;">You can use a total of <b>20</b> skips.</p>' +
+          '<p style="color: white;"><b>I hope you enjoy!</b></p>',
+        showCloseButton: false,
+        showCancelButton: false,
+        background: '#363636',
+        confirmButtonColor: "#ffffff",
+        confirmButtonText:
+          'Great, lets play!',
+        confirmButtonAriaLabel: 'Great, lets play!',
+      })
+
     randomCountry();
         
     })
@@ -139,12 +161,14 @@ function skipCountry() {
 }
 
 function populateData() {
-    remainingTries = 3;
+    remainingTries = 5;
+    hints = 3;
 
     $("#country-image").html("<img id=\"countryimg-canvas\" src=\"" + gl_countryImage + "\">");
-    $("#remaining-hints").html("You have <span style=\"color: aqua\"><b>" + hints + "</b></span> hints remaining.")
-    $(".score-counter").html("<h3><b>SCORE: " + score + "</b></h3>")
-    $("#tries-remaining").html("You have <span style=\"color: red;\"><b>" + remainingTries + "</b></span> guesses remaining.")
+    $("#remaining-hints").html("You have <span style=\"color: #73fdff;\"><b>" + hints + "</b></span> hints remaining.")
+    $(".score-counter").html("<h3><b>SCORE: " + score + "/195</b></h3>")
+    $("#tries-remaining").html("You have <span style=\"color: #ff6e6e;\"><b>" + remainingTries + "</b></span> guesses remaining.")
+    $("#skip-amt-remaining").html("You have <span style=\"color: #d573ff;\"><b>" + remainingSkips + "</b></span> skips remaining.")
     $(".hints-section").html("");
 
     randomRotateImage();
