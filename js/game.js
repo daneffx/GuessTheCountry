@@ -6,6 +6,7 @@ let gl_countryHints = [];
 let score = 0;
 let hints = 3;
 let remainingTries = 3;
+let remainingSkips = 2;
 
     $("#guess-box").keyup(function(event) {
     if (event.keyCode === 13) {
@@ -104,6 +105,28 @@ function getNewHint() {
         Swal.fire({
             title: "<h1 style='color: white;'><b>Oh no!</b></h1>",
             html: "<p style='color: white'>You have no more hints remaining.</p>",
+            imageUrl: 'assets/img/misc/sad.gif',
+            imageWidth: 100,
+            imageHeight: 100,
+            background: '#363636',
+            imageAlt: 'Sad Face',
+            confirmButtonColor: "#ffffff",
+            confirmButtonText: "Okay",
+          })
+    }
+}
+
+function skipCountry() {
+    if(remainingSkips > 0) {
+        remainingSkips = remainingSkips - 1;
+        gl_country = [];
+        gl_countryImage = [];
+        gl_countryHints = [];
+        randomCountry();
+    } else {
+        Swal.fire({
+            title: "<h1 style='color: white;'><b>Oh no!</b></h1>",
+            html: "<p style='color: white'>You've hit the limit of how many times you can skip</p>",
             imageUrl: 'assets/img/misc/sad.gif',
             imageWidth: 100,
             imageHeight: 100,

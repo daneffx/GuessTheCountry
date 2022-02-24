@@ -112,7 +112,30 @@ body.swal2-height-auto {
 }
 
 .hint-options {
-    color: white
+    color: white;
+}
+
+.inline-hs {
+    display: inline;
+}
+
+.skip-button {
+    display: inline-block;
+}
+
+.hnt-divider {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.skip-button p {
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.hint-button {
+    display: inline-block;
 }
 
 .hint-button p {

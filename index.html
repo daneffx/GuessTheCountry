@@ -82,7 +82,7 @@
             <div id="main-content" class="leftside d-flex justify-content-center align-items-center">
                 <div class="main-content" style="text-align: center;">
                     <div class="score-counter">
-                        <h3><b>SCORE: 0</b></h3>
+                        <h3><b>SCORE: 0 / 195</b></h3>
                     </div>
                         <div class="country-question">
                             <h1><b>What country is this?</b></h1>
@@ -99,8 +99,16 @@
                     </div>
                 </div>
                 <div class="hint-options">
-                    <div class="hint-button">
-                        <p id="hint-btn" onclick="getNewHint();"><b><i class="fa-solid fa-circle-question"></i> Get a hint!</b>
+                    <div class="inline-hs">
+                        <div class="hint-button">
+                            <p id="hint-btn" onclick="getNewHint();"><b><i class="fa-solid fa-circle-question"></i> Get a hint!</b></p>
+                        </div>
+                        <div class="hnt-divider">
+                            <p>|</p>
+                        </div>
+                        <div class="skip-button">
+                            <p id="skip-btn" onclick="skipCountry();"><b><i class="fa-solid fa-forward"></i> Skip</b></p>
+                        </div>
                     </div>
                     <div class="hints-section">
                     </div>
