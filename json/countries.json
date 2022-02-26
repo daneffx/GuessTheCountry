@@ -3,12 +3,12 @@
         [{
             "Name": "Afghanistan",
              "images": {
-                 "red": "assets/img/countries/afghanistan/afghanistan-blue.svg",
-                 "blue": "assets/img/countries/afghanistan/afghanistan-green.svg",
-                 "green": "assets/img/countries/afghanistan/afghanistan-red.svg",
-                 "yellow": "assets/img/countries/afghanistan/afghanistan-yellow.svg"
+                 "red": "assets/games/guess-the-country/img/countries/afghanistan/afghanistan-blue.svg",
+                 "blue": "assets/games/guess-the-country/img/countries/afghanistan/afghanistan-green.svg",
+                 "green": "assets/games/guess-the-country/img/countries/afghanistan/afghanistan-red.svg",
+                 "yellow": "assets/games/guess-the-country/img/countries/afghanistan/afghanistan-yellow.svg"
              },
-             "answerimage": "assets/img/countries/afghanistan/afghanistan-black.svg",
+             "answerimage": "assets/games/guess-the-country/img/countries/afghanistan/afghanistan-black.svg",
              "hints": [
                  "Agriculture is the main source of income in the country. It is also rich in natural resources like natural gas and oil.",
                  "It has been a war-torn country for decades and has been under military influence of many countries.",
@@ -28,12 +28,12 @@
         {
             "Name": "Albania",
              "images": {
-                 "red": "assets/img/countries/albania/albania-blue.svg",
-                 "blue": "assets/img/countries/albania/albania-green.svg",
-                 "green": "assets/img/countries/albania/albania-red.svg",
-                 "yellow": "assets/img/countries/albania/albania-yellow.svg"
+                 "red": "assets/games/guess-the-country/img/countries/albania/albania-blue.svg",
+                 "blue": "assets/games/guess-the-country/img/countries/albania/albania-green.svg",
+                 "green": "assets/games/guess-the-country/img/countries/albania/albania-red.svg",
+                 "yellow": "assets/games/guess-the-country/img/countries/albania/albania-yellow.svg"
              },
-             "answerimage": "assets/img/countries/albania/albania-black.svg",
+             "answerimage": "assets/games/guess-the-country/img/countries/albania/albania-black.svg",
              "hints": [
                  "is a small country in Southern Europe.",
                  "There are only 3 million people that live in the country.",
@@ -53,10 +53,10 @@
         {
             "Name": "Algeria",
              "images": {
-                 "red": "assets/img/countries/algeria/algeria-blue.svg",
-                 "blue": "assets/img/countries/algeria/algeria-green.svg",
-                 "green": "assets/img/countries/algeria/algeria-red.svg",
-                 "yellow": "assets/img/countries/algeria/algeria-yellow.svg"
+                 "red": "assets/games/guess-the-country/img/countries/algeria/algeria-blue.svg",
+                 "blue": "assets/games/guess-the-country/img/countries/algeria/algeria-green.svg",
+                 "green": "assets/games/guess-the-country/img/countries/algeria/algeria-red.svg",
+                 "yellow": "assets/games/guess-the-country/img/countries/algeria/algeria-yellow.svg"
              },
              "answerimage": "assets/img/countries/algeria/algeria-black.svg",
              "hints": [
@@ -78,12 +78,12 @@
         {
             "Name": "Andorra",
              "images": {
-                 "red": "assets/img/countries/andorra/andorra-blue.svg",
-                 "blue": "assets/img/countries/andorra/andorra-green.svg",
-                 "green": "assets/img/countries/andorra/andorra-red.svg",
-                 "yellow": "assets/img/countries/andorra/andorra-yellow.svg"
+                 "red": "assets/games/guess-the-country/img/countries/andorra/andorra-blue.svg",
+                 "blue": "assets/games/guess-the-country/img/countries/andorra/andorra-green.svg",
+                 "green": "assets/games/guess-the-country/img/countries/andorra/andorra-red.svg",
+                 "yellow": "assets/games/guess-the-country/img/countries/andorra/andorra-yellow.svg"
              },
-             "answerimage": "assets/img/countries/andorra/andorra-black.svg",
+             "answerimage": "assets/games/guess-the-country/img/countries/andorra/andorra-black.svg",
              "hints": [
                  "It is a tiny, independent principality situated in the Pyrenees mountains in Europe.",
                  "It's known for its ski resorts and a tax-haven status that encourages duty-free shopping.",
@@ -103,12 +103,12 @@
         {
         "Name": "North America",
          "images": {
-             "red": "assets/img/countries/america/na-blue.svg",
-             "blue": "assets/img/countries/america/na-green.svg",
-             "green": "assets/img/countries/america/na-red.svg",
-             "yellow": "assets/img/countries/america/na-yellow.svg"
+             "red": "assets/games/guess-the-country/img/countries/america/na-blue.svg",
+             "blue": "assets/games/guess-the-country/img/countries/america/na-green.svg",
+             "green": "assets/games/guess-the-country/img/countries/america/na-red.svg",
+             "yellow": "assets/games/guess-the-country/img/countries/america/na-yellow.svg"
          },
-         "answerimage": "assets/img/countries/america/na-black.svg",
+         "answerimage": "assets/games/guess-the-country/img/countries/america/na-black.svg",
          "hints": [
              "This country has a population of over 300M",
              "Tipping is really important in this country when paying for something",
@@ -128,12 +128,12 @@
         {
             "Name": "United Kingdom",
              "images": {
-                 "red": "assets/img/countries/uk/uk-blue.svg",
-                 "blue": "assets/img/countries/uk/uk-green.svg",
-                 "green": "assets/img/countries/uk/uk-red.svg",
-                 "yellow": "assets/img/countries/uk/uk-yellow.svg"
+                 "red": "assets/games/guess-the-country/img/countries/uk/uk-blue.svg",
+                 "blue": "assets/games/guess-the-country/img/countries/uk/uk-green.svg",
+                 "green": "assets/games/guess-the-country/img/countries/uk/uk-red.svg",
+                 "yellow": "assets/games/guess-the-country/img/countries/uk/uk-yellow.svg"
              },
-             "answerimage": "assets/img/countries/uk/uk-black.svg",
+             "answerimage": "assets/games/guess-the-country/img/countries/uk/uk-black.svg",
              "hints": [
                  "This country is one of the founding members of the European Union",
                  "This country is known for its rich history",
@@ -149,12 +149,12 @@
         {
             "Name": "Japan",
              "images": {
-                 "red": "assets/img/countries/japan/japan-blue.svg",
-                 "blue": "assets/img/countries/japan/japan-green.svg",
-                 "green": "assets/img/countries/japan/japan-red.svg",
-                 "yellow": "assets/img/countries/japan/japan-yellow.svg"
+                 "red": "assets/games/guess-the-country/img/countries/japan/japan-blue.svg",
+                 "blue": "assets/games/guess-the-country/img/countries/japan/japan-green.svg",
+                 "green": "assets/games/guess-the-country/img/countries/japan/japan-red.svg",
+                 "yellow": "assets/games/guess-the-country/img/countries/japan/japan-yellow.svg"
              },
-             "answerimage": "assets/img/countries/japan/japan-black.svg",
+             "answerimage": "assets/games/guess-the-country/img/countries/japan/japan-black.svg",
              "hints": [
                  "It has the 11th largest population in the world",
                  "This country has one of the best life-expectancy rates in the world",
